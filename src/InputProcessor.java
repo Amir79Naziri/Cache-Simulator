@@ -19,7 +19,9 @@ public class InputProcessor
         scanner = new Scanner (System.in);
     }
 
-
+    /**
+     * creates new InputProcessor
+     */
     public InputProcessor(File file)
     {
         try {
@@ -29,6 +31,7 @@ public class InputProcessor
             e.printStackTrace ();
         }
     }
+
     /**
      * creates a new Control unit from user input
      * @return Control unit

@@ -5,12 +5,24 @@ public class FileRead
     private InputProcessor inputProcessor; // input handler
     private Control control; // control caches
 
-
-    public FileRead(String address)
+    /**
+     * starts a new File
+     * @param address address
+     * @param type type
+     */
+    public FileRead(String address, int type)
     {
-        File file = new File (address);
-        inputProcessor = new InputProcessor (file);
+        if (type == 1)
+        {
+            File file = new File (address);
+            inputProcessor = new InputProcessor (file);
+        }
+        else
+        {
+            inputProcessor = new InputProcessor ();
+        }
         control = inputProcessor.createControl ();
+
     }
 
 
